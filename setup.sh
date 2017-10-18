@@ -8,6 +8,8 @@ vim /etc/sudoers
 cd conda
 7za e conda.zip
 cd conda
-bash Anaconda3-5.0.0-Linux-x86_64.sh
-conda create py3 python=3
-pip install numpy scrapy nltk tensorflow-gpu psycopg2 flask apiai requests
+bash conda/Anaconda3-5.0.0-Linux-x86_64.sh
+conda create --name=py3 python=3 -y
+activate py3
+conda install numpy scrapy nltk tensorflow-gpu psycopg2 flask requests -y
+pip install apiai
